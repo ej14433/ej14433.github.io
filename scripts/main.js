@@ -8,12 +8,15 @@ function onSignIn(googleUser) {
   //console.log('Given Name: ' + profile.getGivenName());
   //console.log('Family Name: ' + profile.getFamilyName());
   //console.log("Image URL: " + profile.getImageUrl());
-  console.log("Email: " + profile.getEmail());
 
   // The ID token you need to pass to your backend:
   //var id_token = googleUser.getAuthResponse().id_token;
   //console.log("ID Token: " + id_token);
 
+  console.log("Email: " + profile.getEmail());
   window.location.href = "http://ej14433.github.io/test.html";
-  console.log('change');
+
+  var email = profile.getEmail();
+  var body = document.getElementsByClassName('body');
+  body.innerHTML += email;
 };
