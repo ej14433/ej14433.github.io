@@ -15,5 +15,5 @@ function onSignIn(googleUser) {
   var id_token = googleUser.getAuthResponse().id_token;
   console.log("ID Token: " + id_token);
 
-  window.location.href = "http://ej14433.github.io/test.html";
+  //window.location.href = "http://ej14433.github.io/test.html";
 };
