@@ -1,7 +1,6 @@
 'use strict'
 
 function onSignIn(googleUser) {
-  console.log('signing in');
   // Useful data for your client-side scripts:
   var profile = googleUser.getBasicProfile();
   //console.log("ID: " + profile.getId()); // Don't send this directly to your server!
@@ -16,4 +15,5 @@ function onSignIn(googleUser) {
   //console.log("ID Token: " + id_token);
 
   window.location.href = "http://ej14433.github.io/test.html";
+  console.log('change');
 };
