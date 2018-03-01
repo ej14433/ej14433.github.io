@@ -17,3 +17,7 @@ function onSignIn(googleUser) {
 
   //window.location.href = "http://ej14433.github.io/test.html";
 };
+
+function signOut() {
+  gapi.auth.signOut();
+};
