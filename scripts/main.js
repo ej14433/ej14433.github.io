@@ -1,17 +1,26 @@
 'use strict'
 
+var wrong = 0;
+var right = 0;
+
+var body;
+
 function onSignIn(googleUser) {
-  // Useful data for your client-side scripts:
+  body = document.getElementsByTagName('body')[0];
+
   var profile = googleUser.getBasicProfile();
-  // The ID token you need to pass to your backend:
-  var id_token = googleUser.getAuthResponse().id_token;
-  // console.log("ID Token: " + id_token);
+  var email   = profile.getEmail();
+  var section = body.getElementById('one');
 
-  console.log("Email: " + profile.getEmail());
-  window.location.href = "http://ej14433.github.io/test.html";
+  console.log(section);
+  section.display = 'block';
+};
 
-  var email = profile.getEmail();
-  var body = document.getElementsByTagName('body')[0];
-  body.innerHTML += email;
-  //body.innerHTML += 'email';
+function Wrong() {
+  wrong++;
+};
+
+function Right(id) {
+  console.log(id);
+  right++;
 };
