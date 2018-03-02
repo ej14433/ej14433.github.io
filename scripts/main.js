@@ -2,25 +2,33 @@
 
 var wrong = 0;
 var right = 0;
+var question = 0;
 
 var body;
+var sections;
 
 function onSignIn(googleUser) {
   body = document.getElementsByTagName('body')[0];
+  sections = document.getElementsByClassName('question');
 
   var profile = googleUser.getBasicProfile();
   var email   = profile.getEmail();
-  var section = document.getElementById('one');
 
-  console.log(section);
-  section.style.display = 'block';
+  console.log(section[0]);
+  section[0].style.display = 'block';
 };
 
 function Wrong() {
   wrong++;
+  console.log(wrong);
 };
 
 function Right(id) {
-  console.log(id);
+  sections = document.getElementsByClassName('question'); //REMOVE FOR LIVE
+  sections[question].style.display = 'none';
+  question++;
   right++;
+  sections[question].style.display = 'block';
+
+  console.log(right);
 };

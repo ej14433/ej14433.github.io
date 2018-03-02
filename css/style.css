@@ -2,10 +2,15 @@
   font-family: sans-serif;
 }
 
+.g-signin2 {
+  margin: auto;
+}
+
 .question {
   display: none;
+
 }
 
 .question#one {
-  /*display: block;*/
+  display: block;
 }
