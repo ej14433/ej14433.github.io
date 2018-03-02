@@ -10,7 +10,7 @@ function onSignIn(googleUser) {
 
   var profile = googleUser.getBasicProfile();
   var email   = profile.getEmail();
-  var section = body.getElementById('one');
+  var section = document.getElementById('one');
 
   console.log(section);
   section.display = 'block';
