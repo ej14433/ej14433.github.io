@@ -16,9 +16,8 @@ function onSignIn(googleUser) {
   console.log("Email: " + profile.getEmail());
   // window.location.href = "http://ej14433.github.io/test.html";
 
-  //var email = profile.getEmail();
+  var email = profile.getEmail();
   var body = document.getElementsByTagName('body')[0];
-  console.log(body.innerHTML);
-  //body.innerHTML += email;
+  body.innerHTML += email;
   //body.innerHTML += 'email';
 };
