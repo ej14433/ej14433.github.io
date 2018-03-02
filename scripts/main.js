@@ -6,15 +6,16 @@ var question = 0;
 
 var body;
 var sections;
+var email;
 
 function onSignIn(googleUser) {
-  body = document.getElementsByTagName('body')[0];
+  body     = document.getElementsByTagName('body')[0];
   sections = document.getElementsByClassName('question');
 
   var profile = googleUser.getBasicProfile();
-  var email   = profile.getEmail();
+  email       = profile.getEmail();
 
-  console.log(section[0]);
+  console.log(sections[0]);
   sections[0].style.display = 'block';
 };
 
@@ -32,3 +33,18 @@ function Right(id) {
 
   console.log(right);
 };
+
+function Submit() {
+  var sql = require('sqlite3');
+
+  var db = sql.openDatabase('../data.db')
+
+  db.serialize(function() {
+    db.each('INSERT INTO results VALUES (?,?,?)',[email, right, wrong]);
+  });
+
+  db.close(function(err) {
+    if(err) throw err;
+    console.log('Close connection');
+  });
+}
