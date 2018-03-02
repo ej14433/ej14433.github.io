@@ -2,6 +2,10 @@
   font-family: sans-serif;
 }
 
-section {
-  /*display: none;*/
+.question {
+  display: none;
+}
+
+.question#one {
+  /*display: block;*/
 }
