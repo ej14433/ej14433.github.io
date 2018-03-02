@@ -13,7 +13,7 @@ function onSignIn(googleUser) {
   var section = document.getElementById('one');
 
   console.log(section);
-  section.display = 'block';
+  section.style.display = 'block';
 };
 
 function Wrong() {
