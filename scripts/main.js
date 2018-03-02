@@ -15,7 +15,7 @@ function onSignIn(googleUser) {
   var email   = profile.getEmail();
 
   console.log(section[0]);
-  section[0].style.display = 'block';
+  sections[0].style.display = 'block';
 };
 
 function Wrong() {
