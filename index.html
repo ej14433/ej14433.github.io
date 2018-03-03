@@ -5,7 +5,6 @@
     <meta name="google-signin-client_id" content="256366708812-ot8ugc0gqltq4d135t28hdlq0nhhobgm.apps.googleusercontent.com">
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
-
   </head>
   <body>
 		<h1>Memory Test.</h1>
@@ -20,20 +19,41 @@
         </ul>
       </div>
       <div class="question" id='two'>
-        <h2>Tank:</h2>
+        <h2>First Aid:</h2>
+        <ul>
+          <button type="button" onclick="Wrong()">1</button>
+          <button type="button" name="one" onclick="Right(this.name)">2</button>
+        </ul>
+      </div>
+      <div class="question" id='thr'>
+        <h2>Oxygen:</h2>
+        <ul>
+          <button type="button" onclick="Wrong()">1</button>
+          <button type="button" name="one" onclick="Right(this.name)">2</button>
+        </ul>
+      </div>
+      <div class="question" id='fou'>
+        <h2>Tow Rope:</h2>
+        <ul>
+          <button type="button" onclick="Wrong()">1</button>
+          <button type="button" name="one" onclick="Right(this.name)">2</button>
+        </ul>
+      </div>
+      <div class="question" id='fiv'>
+        <h2>:</h2>
         <ul>
           <button type="button" onclick="Wrong()">1</button>
           <button type="button" name="one" onclick="Right(this.name)">2</button>
         </ul>
       </div>
       <div class="question" id='submit'>
-        <h2>Tank:</h2>
+        <h2>Submit Answers:</h2>
         <ul>
           <button type="button" onclick="Submit()">Submit</button>
         </ul>
       </div>
     </section>
       <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
-      <script src="bundle.js"></script>
+      <script src="./scripts/bundle.js"></script>
   </body>
 </html>
