@@ -19,7 +19,7 @@ var config = {
 };
 
 firebase.initializeApp(config);
-var ref = firebase.database().ref('messages');
+var ref = firebase.database().ref('responses');
 
 window.onSignIn = function(googleUser) {
   body     = document.getElementsByTagName('body')[0];
@@ -52,31 +52,10 @@ window.Submit = function() {
 };
 
 function saveMessage(email, right, wrong) {
-  var newMessageRef = ref.push();
-  newMessageRef.set({
+  var newResponseRef = ref.push();
+  newResponseRef.set({
     email:email,
     right:right,
     wrong:wrong
   });
 };
-
-// window.Submit = function() {
-//
-//   console.log('submit');
-//
-//   var sql = require('sqlite3');
-//
-//   var db = new sql.Database('data.db', function(err) {
-//     if(err) throw err;
-//     console.log("Connected!");
-//   });
-//
-//   db.serialize(function() {
-//     db.each('INSERT INTO results VALUES (?,?,?)',[email, right, wrong]);
-//   });
-//
-//   db.close(function(err) {
-//     if(err) throw err;
-//     console.log('Close connection');
-//   });
-// }
