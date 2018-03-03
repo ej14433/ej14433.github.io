@@ -35,6 +35,9 @@ function Right(id) {
 };
 
 function Submit() {
+
+  console.log('submit');
+  
   var sql = require('sqlite3');
 
   var db = sql.openDatabase('../data.db')
