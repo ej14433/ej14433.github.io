@@ -36,11 +36,11 @@ function Right(id) {
 
 function Submit() {
 
-  console.log('submit');
-  
-  var sql = require('sqlite3');
-
-  var db = sql.openDatabase('../data.db')
+  var sql = require('../sqlite3');
+  var db = new sql.Database('../data.db', function(err) {
+    if(err) throw err;
+    console.log("Connected!");
+  });
 
   db.serialize(function() {
     db.each('INSERT INTO results VALUES (?,?,?)',[email, right, wrong]);
