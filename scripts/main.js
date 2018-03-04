@@ -35,7 +35,7 @@ window.Wrong = function() {
   wrong++;
 };
 
-window.Right = function(id) {
+window.Right = function() {
   sections = document.getElementsByClassName('question'); //REMOVE FOR LIVE
   sections[question].style.display = 'none';
   question++;

@@ -7,45 +7,21 @@
     <script src="https://apis.google.com/js/platform.js" async defer></script>
   </head>
   <body>
-		<h1>Memory Test</h1>
-    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+    <header>
+      <h1>Memory Test</h1>
+      <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+    </header>
 
     <section class="test">
       <div class="question" id='one'>
         <h2>Gloves:</h2>
         <ul>
           <button type="button" onclick="Wrong()">1</button>
-          <button type="button" name="one" onclick="Right(this.name)">2</button>
+          <button type="button" onclick="Right()">2</button>
           <button type="button" onclick="Wrong()">3</button>
           <button type="button" onclick="Wrong()">4</button>
-        </ul>
-      </div>
-      <div class="question" id='two'>
-        <h2>First Aid:</h2>
-        <ul>
-          <button type="button" onclick="Wrong()">1</button>
-          <button type="button" name="one" onclick="Right(this.name)">2</button>
-        </ul>
-      </div>
-      <div class="question" id='thr'>
-        <h2>Oxygen:</h2>
-        <ul>
-          <button type="button" onclick="Wrong()">1</button>
-          <button type="button" name="one" onclick="Right(this.name)">2</button>
-        </ul>
-      </div>
-      <div class="question" id='fou'>
-        <h2>Tow Rope:</h2>
-        <ul>
-          <button type="button" onclick="Wrong()">1</button>
-          <button type="button" name="one" onclick="Right(this.name)">2</button>
-        </ul>
-      </div>
-      <div class="question" id='fiv'>
-        <h2>:</h2>
-        <ul>
-          <button type="button" onclick="Wrong()">1</button>
-          <button type="button" name="one" onclick="Right(this.name)">2</button>
+          <button type="button" onclick="Wrong()">5</button>
+          <button type="button" onclick="Wrong()">6</button>
         </ul>
       </div>
       <div class="question" id='submit'>
@@ -60,5 +36,10 @@
     </section>
       <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
       <script src="./scripts/bundle.js"></script>
+
+      <footer>
+        <h2>Elis Jones</h2>
+        <div class="logo"><img src="uob_logo.png" alt=""></div>
+      </footer>
   </body>
 </html>

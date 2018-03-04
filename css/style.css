@@ -1,6 +1,17 @@
 * {
-  font-family: sans-serif;
-  overflow: hidden;
+  font-family: sans-serif;;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  padding: 1rem;
+}
+
+ul {
 }
 
 .g-signin2 {
@@ -8,6 +19,7 @@
 }
 
 .question {
+  padding: 1rem;
   display: none;
   margin: auto;
 }
@@ -35,7 +47,23 @@ button {
   overflow: hidden;
 }
 
-img{
+.image img{
   max-width: 95%;
   margin: 0 30%;
+}
+
+footer {
+  margin-top: 5rem;
+  padding: 1rem;
+}
+
+.logo {
+  float: right;
+
+  width: 30vw;
+  height: 10rem;
+}
+
+.logo img{
+  width: 100%;
 }
