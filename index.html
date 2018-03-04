@@ -7,7 +7,7 @@
     <script src="https://apis.google.com/js/platform.js" async defer></script>
   </head>
   <body>
-		<h1>Memory Test.</h1>
+		<h1>Memory Test</h1>
     <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
 
     <section class="test">
@@ -16,6 +16,8 @@
         <ul>
           <button type="button" onclick="Wrong()">1</button>
           <button type="button" name="one" onclick="Right(this.name)">2</button>
+          <button type="button" onclick="Wrong()">3</button>
+          <button type="button" onclick="Wrong()">4</button>
         </ul>
       </div>
       <div class="question" id='two'>
@@ -52,6 +54,9 @@
           <button type="button" onclick="Submit()">Submit</button>
         </ul>
       </div>
+    </section>
+    <section class="image">
+      <img src="ilb_simple.png" alt="">
     </section>
       <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
       <script src="./scripts/bundle.js"></script>
