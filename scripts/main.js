@@ -36,7 +36,7 @@ window.Wrong = function() {
 };
 
 window.Right = function() {
-  sections = document.getElementsByClassName('question'); //REMOVE FOR LIVE
+  //sections = document.getElementsByClassName('question'); //REMOVE FOR LIVE
   sections[question].style.display = 'none';
   question++;
   right++;
@@ -44,7 +44,7 @@ window.Right = function() {
 };
 
 window.Submit = function() {
-  sections = document.getElementsByClassName('question'); //REMOVE FOR LIVE
+  //sections = document.getElementsByClassName('question'); //REMOVE FOR LIVE
   sections[question].style.display = 'none';
   question++;
   sections[question].style.display = 'block';
