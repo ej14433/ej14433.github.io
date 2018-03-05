@@ -27,6 +27,8 @@ header h1 {
 
 .g-signin2 {
   grid-column: 2;
+  float: right;
+  margin: auto;
 }
 
 .question {
