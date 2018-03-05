@@ -45,9 +45,6 @@ window.Right = function() {
 
 window.Submit = function() {
   //sections = document.getElementsByClassName('question'); //REMOVE FOR LIVE
-  sections[question].style.display = 'none';
-  question++;
-  sections[question].style.display = 'block';
   saveMessage(email, right, wrong);
 };
 
@@ -58,4 +55,8 @@ function saveMessage(email, right, wrong) {
     right:right,
     wrong:wrong
   });
+
+  sections[question].style.display = 'none';
+  question++;
+  sections[question].style.display = 'block';
 };
