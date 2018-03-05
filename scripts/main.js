@@ -45,6 +45,10 @@ window.Right = function() {
 
 window.Submit = function() {
   saveMessage(email, right, wrong);
+  sections[question].style.display = 'none';
+  question++;
+  sections[question].style.display = 'block';
+
 };
 
 function saveMessage(email, right, wrong) {
