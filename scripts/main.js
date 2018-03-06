@@ -30,6 +30,7 @@ window.onSignIn = function(googleUser) {
 
   var signin  = document.getElementById('signin');
   signin.style.display = 'none';
+  
   sections[0].style.display = 'block';
 };
 

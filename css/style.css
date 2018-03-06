@@ -38,6 +38,10 @@ header h1 {
   margin: auto;
 }
 
+.question#signin {
+  display: block;
+}
+
 .question#one {
   display: hidden;
   /* display: block; */
