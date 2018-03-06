@@ -28,11 +28,8 @@ window.onSignIn = function(googleUser) {
   var profile = googleUser.getBasicProfile();
   email       = profile.getEmail();
 
-  // var signin  = document.getElementById('signin');
-  // signin.style.display = 'none';
-  // console.log(signin.style.display);
-
-  console.log('in');
+  var signin  = document.getElementById('signin');
+  signin.style.display = 'none';
 
   sections[0].style.display = 'block';
 };
