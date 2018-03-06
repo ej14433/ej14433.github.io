@@ -39,8 +39,8 @@ header h1 {
 }
 
 .question#one {
-  display: hidden; /*LIVE*/
-  /* display: block; */  /*TEST*/
+  display: hidden;
+  /* display: block; */
 }
 
 .test {

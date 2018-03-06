@@ -28,6 +28,8 @@ window.onSignIn = function(googleUser) {
   var profile = googleUser.getBasicProfile();
   email       = profile.getEmail();
 
+  var signin  = document.getElementById('signin');
+  signin.style.display = 'none';
   sections[0].style.display = 'block';
 };
 
@@ -36,7 +38,7 @@ window.Wrong = function() {
 };
 
 window.Right = function() {
-  //sections = document.getElementsByClassName('question'); //REMOVE FOR LIVE
+  sections = document.getElementsByClassName('question'); //REMOVE FOR LIVE
   sections[question].style.display = 'none';
   question++;
   right++;
@@ -44,7 +46,12 @@ window.Right = function() {
 };
 
 window.Submit = function() {
-  //sections = document.getElementsByClassName('question'); //REMOVE FOR LIVE
+
+  var section = document.getElementById('submit');
+  var thanks  = document.getElementById('thanks');
+  section.style.display = 'none' ;
+  thanks.style.display  = 'block';
+
   saveMessage(email, right, wrong);
 };
 
@@ -55,8 +62,4 @@ function saveMessage(email, right, wrong) {
     right:right,
     wrong:wrong
   });
-
-  sections[question].style.display = 'none';
-  question++;
-  sections[question].style.display = 'block';
 };
