@@ -35,7 +35,7 @@ window.onSignIn = function(googleUser) {
 
   console.log('in');
 
-  sections[0].style.display = 'block';
+  sections[1].style.display = 'block';
 };
 
 window.Wrong = function() {
