@@ -101,7 +101,7 @@ footer .logo {
   margin: 1rem;;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 900px) {
   *{
     font-size: 1.3em;
   }
