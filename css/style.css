@@ -101,8 +101,19 @@ footer .logo {
   margin: 1rem;;
 }
 
-@media (max-width:921px) {
+@media only screen and (max-width: 500px) {
   *{
     font-size: 1.3em;
+  }
+  footer {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  footer .logo {
+    grid-column: span 2;
+    width: 100vw;
+  }
+  .logo img {
+    float: none;
   }
 }
