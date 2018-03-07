@@ -3,7 +3,7 @@
 
 var wrong = 0;
 var right = 0;
-var question = 0;
+var question = 1;
 
 var body;
 var sections;
