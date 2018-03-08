@@ -100,3 +100,7 @@ footer .logo {
   float: right;
   margin: 1rem;;
 }
+
+#intro {
+  padding: 1rem;
+}

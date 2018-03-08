@@ -33,9 +33,6 @@ window.onSignIn = function(googleUser) {
   signin.style.display = 'none';
   console.log(signin);
 
-  console.log('in');
-
-  sections[1].style.display = 'block';
 };
 
 window.Wrong = function() {
@@ -68,5 +65,11 @@ function saveMessage(email, right, wrong) {
     wrong:wrong
   });
 };
+
+window.Next = function() {
+  var intro = document.getElementById('intro');
+  intro.style.display = 'none';
+  sections[1].style.display = 'block';
+}
 
 },{}]},{},[1]);
