@@ -31,7 +31,7 @@ window.onSignIn = function(googleUser) {
   var signin  = document.getElementById('signin');
   signin.style.display = 'none';
 
-  section[question].style.display = 'block';
+  sections[question].style.display = 'block';
 };
 
 window.Wrong = function() {
