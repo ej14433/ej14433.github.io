@@ -104,7 +104,9 @@ footer .logo {
 
 #intro {
   display: none;
+  /* display: block; */
   padding: 1rem;
+  max-width: 50rem;
 }
 
 #test {
