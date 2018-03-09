@@ -57,6 +57,15 @@ window.Submit = function() {
   saveMessage(email, right, wrong);
 };
 
+window.Next = function() {
+
+  var intro = document.getElementById('intro');
+  var test  = document.getElementById('test');
+  intro.style.display = 'none';
+  test.style.display = 'block';
+  
+};
+
 function saveMessage(email, right, wrong) {
   var newResponseRef = ref.push();
   newResponseRef.set({
@@ -65,12 +74,5 @@ function saveMessage(email, right, wrong) {
     wrong:wrong
   });
 };
-
-window.Next = function() {
-  var intro = document.getElementById('intro');
-  var test  = document.getElementById('test');
-  intro.style.display = 'none';
-  test.style.display = 'block';
-}
 
 },{}]},{},[1]);
