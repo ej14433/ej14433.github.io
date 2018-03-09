@@ -29,9 +29,9 @@ window.onSignIn = function(googleUser) {
   email       = profile.getEmail();
 
   var signin  = document.getElementById('signin');
-  signin.style.display = 'none';
-
-  sections[question].style.display = 'block';
+  var intro   = document.getElementById('intro' );
+  signin.style.display = 'none' ;
+  intro.style.display  = 'block';
 };
 
 window.Wrong = function() {
@@ -60,8 +60,8 @@ window.Next = function() {
 
   var intro = document.getElementById('intro');
   var test  = document.getElementById('test');
-  intro.style.display = 'none';
-  test.style.display = 'block';
+  intro.style.display = 'none' ;
+  test.style.display  = 'block';
 
 };
 

@@ -103,7 +103,7 @@ footer .logo {
 }
 
 #intro {
-  display: block;
+  display: none;
   padding: 1rem;
 }
 
