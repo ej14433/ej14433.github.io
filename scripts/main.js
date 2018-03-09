@@ -67,6 +67,7 @@ function saveMessage(email, right, wrong) {
 
 window.Next = function() {
   var intro = document.getElementById('intro');
+  var test  = document.getElementById('test');
   intro.style.display = 'none';
-  sections[1].style.display = 'block';
+  test.style.display = 'block';
 }
