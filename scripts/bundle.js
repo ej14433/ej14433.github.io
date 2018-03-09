@@ -31,8 +31,8 @@ window.onSignIn = function(googleUser) {
 
   var signin  = document.getElementById('signin');
   signin.style.display = 'none';
-  console.log(signin);
 
+  section[question].style.display = 'block';
 };
 
 window.Wrong = function() {
@@ -63,7 +63,7 @@ window.Next = function() {
   var test  = document.getElementById('test');
   intro.style.display = 'none';
   test.style.display = 'block';
-  
+
 };
 
 function saveMessage(email, right, wrong) {
