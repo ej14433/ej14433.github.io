@@ -63,6 +63,7 @@ window.Next = function() {
   var test  = document.getElementById('test');
   intro.style.display = 'none' ;
   test.style.display  = 'block';
+  sections[question].style.display = 'block';
 
 };
 
