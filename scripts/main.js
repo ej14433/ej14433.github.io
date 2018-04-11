@@ -4,10 +4,10 @@ window.addEventListener('load', function (e) {
     var target = e.target;
     if(target.className == "content-title") {
       if(target.nextElementSibling.style.maxHeight == 0 || target.nextElementSibling.style.maxHeight == '0rem') {
-        target.nextElementSibling.style.maxHeight = '20rem';
+        target.nextElementSibling.style.maxHeight = '30rem';
       } else {
         target.nextElementSibling.style.maxHeight = '0rem';
-      }  
+      }
     }
   }, false);
 });
