@@ -158,13 +158,14 @@ hr {
   background-color: var(--dark);
   opacity: 0;
   transition: .5s;
+  text-align: center;
 }
 
 .logo-overlay p {
   color: var(--white);
   justify-self: center;
   align-self: center;
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
 @media (max-width:870px) {
