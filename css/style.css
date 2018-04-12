@@ -139,7 +139,32 @@ hr {
 }
 
 .tech-logo {
-  max-width: 100%;
+  width: 100%;
+}
+
+.logo-container {
+  position: relative;
+}
+
+.logo-overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--dark);
+  opacity: 0;
+  transition: .5s;
+}
+
+.logo-overlay p {
+  color: var(--white);
+  justify-self: center;
+  align-self: center;
+  font-size: 1.25rem;
 }
 
 @media (max-width:870px) {
