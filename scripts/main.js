@@ -3,7 +3,6 @@ window.addEventListener('load', function (e) {
   document.addEventListener('click', function (e) {
     var target = e.target;
     var content = target.nextElementSibling;
-    console.dir(content);
     if(content) {
       var css              = window.getComputedStyle(content, null);
       var contentMaxHeight = css.getPropertyValue('max-height');
