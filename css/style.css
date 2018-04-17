@@ -131,6 +131,9 @@ hr {
 {
     cursor: pointer;
 }
+.inner-content-title:hover {
+  cursor: pointer;
+}
 
 .content .edu-list
 {
@@ -188,12 +191,17 @@ hr {
     transform: rotate(90deg);
 }
 
+.inner-content-title i {
+  padding: 0.5rem;
+  font-size: 0.75rem;
+}
+
 .inner-content-title:hover i {
   transition-duration: .2s;
   transform: rotate(90deg);
 }
 
-.content i
+.content-title i
 {
     padding: .5rem;
 
