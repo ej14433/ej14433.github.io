@@ -2,21 +2,24 @@
 window.addEventListener('load', function (e) {
   document.addEventListener('click', function (e) {
     var target = e.target;
-
-
-    if(target.classList.contains("content-title")) {
-      if(target.nextElementSibling.style.maxHeight == 0 || target.nextElementSibling.style.maxHeight == '0rem') {
-        target.nextElementSibling.style.maxHeight = '30rem';
+    var content = target.nextElementSibling;
+    console.dir(content);
+    if(content) {
+      var css              = window.getComputedStyle(content, null);
+      var contentMaxHeight = css.getPropertyValue('max-height');
+      var contentDisplay   = css.getPropertyValue('display');
+    }
+    if(target.classList.contains("content-title") || target.classList.contains("inner-content-title")) {
+      if(contentMaxHeight == '0px' ) {
+        content.style.maxHeight = '30rem';
       } else {
-        target.nextElementSibling.style.maxHeight = '0rem';
+        content.style.maxHeight = '0rem';
       }
     }
-
-
     if(target.classList.contains("tech-logo")) {
-      if(target.nextElementSibling.style.display == 'none' || target.nextElementSibling.style.display == '') {
-        target.nextElementSibling.style.display = 'grid';
-        target.nextElementSibling.style.opacity = '1';
+      if(contentDisplay == 'none') {
+        content.style.display = 'grid';
+        content.style.opacity = '1';
       }
     }
     if(target.classList.contains("logo-overlay") || target.classList.contains("logo-overlay-text")) {
