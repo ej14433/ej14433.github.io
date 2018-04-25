@@ -2,6 +2,11 @@
 window.addEventListener('load', function (e) {
   document.addEventListener('click', function (e) {
     var target = e.target;
+
+    if(target.classList.contains("fa-chevron-right")) {
+      target = target.parentElement;
+    }
+    
     var content = target.nextElementSibling;
     if(content) {
       var css              = window.getComputedStyle(content, null);
