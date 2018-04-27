@@ -32,7 +32,7 @@ body {
 .header {
     display: grid;
 
-    height: 100vh;
+    height: 75vh;
 
     grid-column: span 1;
 }
