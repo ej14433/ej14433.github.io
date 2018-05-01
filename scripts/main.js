@@ -1,37 +1,76 @@
-'use strict';
-window.addEventListener('load', function (e) {
-  document.addEventListener('click', function (e) {
-    var target = e.target;
+'use strict'
 
-    if(target.classList.contains("fa-chevron-right")) {
-      target = target.parentElement;
-    }
-    
-    var content = target.nextElementSibling;
-    if(content) {
-      var css              = window.getComputedStyle(content, null);
-      var contentMaxHeight = css.getPropertyValue('max-height');
-      var contentDisplay   = css.getPropertyValue('display');
-    }
-    if(target.classList.contains("content-title") || target.classList.contains("inner-content-title")) {
-      if(contentMaxHeight == '0px' ) {
-        content.style.maxHeight = '30rem';
-      } else {
-        content.style.maxHeight = '0rem';
-      }
-    }
-    if(target.classList.contains("tech-logo")) {
-      if(contentDisplay == 'none') {
-        content.style.display = 'grid';
-        content.style.opacity = '1';
-      }
-    }
-    if(target.classList.contains("logo-overlay") || target.classList.contains("logo-overlay-text")) {
-      if(target.classList.contains("logo-overlay-text")) {
-        target = target.parentElement;
-      }
-      target.style.opacity = '0';
-      setTimeout(function(){ target.style.display = 'none'; }, 500);
-    }
-  }, false);
-});
+var wrong = 0;
+var right = 0;
+var question = 1;
+
+var body;
+var sections;
+var email;
+
+// Initialize Firebase
+var config = {
+  apiKey: "AIzaSyC4Rx9Qv8-VK4u9djBPBKbWFiGv7HBBKHw",
+  authDomain: "memory-test-196712.firebaseapp.com",
+  databaseURL: "https://memory-test-196712.firebaseio.com",
+  projectId: "memory-test-196712",
+  storageBucket: "",
+  messagingSenderId: "256366708812"
+};
+
+firebase.initializeApp(config);
+var ref = firebase.database().ref('messages');
+
+window.onSignIn = function(googleUser) {
+  body     = document.getElementsByTagName('body')[0];
+  sections = document.getElementsByClassName('question');
+
+  var profile = googleUser.getBasicProfile();
+  email   = profile.getEmail();
+
+  var signin  = document.getElementById('signin');
+  var intro   = document.getElementById('intro' );
+  signin.style.display = 'none' ;
+  intro.style.display  = 'block';
+};
+
+window.Wrong = function() {
+  wrong++;
+};
+
+window.Right = function() {
+  sections = document.getElementsByClassName('question');
+  sections[question].style.display = 'none';
+  question++;
+  right++;
+  sections[question].style.display = 'block';
+};
+
+window.Submit = function() {
+
+  var section = document.getElementById('submit');
+  var thanks  = document.getElementById('thanks');
+  section.style.display = 'none' ;
+  thanks.style.display  = 'block';
+
+  saveMessage(email, right, wrong);
+};
+
+window.Next = function() {
+
+  var intro = document.getElementById('intro');
+  var test  = document.getElementById('test');
+  intro.style.display = 'none' ;
+  test.style.display  = 'block';
+  sections[question].style.display = 'block';
+
+};
+
+function saveMessage(email, right, wrong) {
+  var newResponseRef = ref.push();
+  newResponseRef.set({
+    email:email,
+    right:right,
+    wrong:wrong
+  });
+};
