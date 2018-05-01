@@ -14,9 +14,5 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ej14433/ej14433.github.io/issues"
-  },
-  "homepage": "https://github.com/ej14433/ej14433.github.io#readme",
-  "dependencies": {
-    "sqlite3": "^3.1.13"
   }
 }
