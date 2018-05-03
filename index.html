@@ -1,191 +1,174 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta name="google-signin-scope" content="profile email"/>
-    <meta name="google-signin-client_id" content="256366708812-ot8ugc0gqltq4d135t28hdlq0nhhobgm.apps.googleusercontent.com"/>
+    <meta name="author" content="Elis Jones"></meta>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="stylesheet" href="./css/style.css"/>
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-    <title>Memory Test | D-Class Explorer</title>
+    <title> Elis Jones - Portfolio </title>
+    <script src="./scripts/main.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css">
+    <script src="./scripts/main.js"></script>
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
+    <link rel="icon" href="./favicon.png" type="image/x-icon">
   </head>
+
   <body>
-    <header>
-      <h1>Memory Test</h1>
-      <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
-    </header>
-
-    <section id="intro">
-      <h2>Please read the instructions carefully:</h2>
-      <p>
-        You must sign in to a google account, this is only used to prove your identity, and no more data is gathered.
-
-      </br></br>
-
-        You are presented with the layout of the D-Class Lifeboat you explored. You will be asked for the location of 9 objects which you saw on the vessel. Each location is illustrated on the layout, and has an associated button.
-
-      </br></br>
-
-        Once you have guessed the correct location of that item, you will be moved to the next question.
-
-      </br></br>
-
-        Each compartment only contains one item. Each item is only asked for once.
-      </p>
-
-      <button type="button" onclick=Next()>Next</button>
-    </section>
-
-    <section id="test">
-      <div class="question" id="signin">
-        <h2>Please sign in first.</h2>
-      </div>
-      <div class="question" id='one'>
-        <h2>Gloves:</h2>
-        <ul>
-          <button type="button" onclick="Wrong()">1</button>
-          <button type="button" onclick="Wrong()">2</button>
-          <button type="button" onclick="Wrong()">3</button>
-          <button type="button" onclick="Wrong()">4</button>
-          <button type="button" onclick="Wrong()">5</button>
-          <button type="button" onclick="Wrong()">6</button>
-          <button type="button" onclick="Wrong()">7</button>
-          <button type="button" onclick="Wrong()">8</button>
-          <button type="button" onclick="Right()">9</button>
-        </ul>
-      </div>
-      <div class="question">
-        <h2>First Aid Kit:</h2>
-        <ul>
-          <button type="button" onclick="Wrong()">1</button>
-          <button type="button" onclick="Wrong()">2</button>
-          <button type="button" onclick="Wrong()">3</button>
-          <button type="button" onclick="Wrong()">4</button>
-          <button type="button" onclick="Wrong()">5</button>
-          <button type="button" onclick="Right()">6</button>
-          <button type="button" onclick="Wrong()">7</button>
-          <button type="button" onclick="Wrong()">8</button>
-          <button type="button" onclick="Wrong()">9</button>
-        </ul>
-      </div>
-      <div class="question">
-        <h2>Tow Rope:</h2>
-        <ul>
-          <button type="button" onclick="Wrong()">1</button>
-          <button type="button" onclick="Right()">2</button>
-          <button type="button" onclick="Wrong()">3</button>
-          <button type="button" onclick="Wrong()">4</button>
-          <button type="button" onclick="Wrong()">5</button>
-          <button type="button" onclick="Wrong()">6</button>
-          <button type="button" onclick="Wrong()">7</button>
-          <button type="button" onclick="Wrong()">8</button>
-          <button type="button" onclick="Wrong()">9</button>
-        </ul>
-      </div>
-      <div class="question">
-        <h2>Light:</h2>
-        <ul>
-          <button type="button" onclick="Wrong()">1</button>
-          <button type="button" onclick="Wrong()">2</button>
-          <button type="button" onclick="Wrong()">3</button>
-          <button type="button" onclick="Right()">4</button>
-          <button type="button" onclick="Wrong()">5</button>
-          <button type="button" onclick="Wrong()">6</button>
-          <button type="button" onclick="Wrong()">7</button>
-          <button type="button" onclick="Wrong()">8</button>
-          <button type="button" onclick="Wrong()">9</button>
-        </ul>
-      </div>
-      <div class="question">
-        <h2>Anchor:</h2>
-        <ul>
-          <button type="button" onclick="Wrong()">1</button>
-          <button type="button" onclick="Wrong()">2</button>
-          <button type="button" onclick="Wrong()">3</button>
-          <button type="button" onclick="Wrong()">4</button>
-          <button type="button" onclick="Wrong()">5</button>
-          <button type="button" onclick="Wrong()">6</button>
-          <button type="button" onclick="Wrong()">7</button>
-          <button type="button" onclick="Right()">8</button>
-          <button type="button" onclick="Wrong()">9</button>
-        </ul>
-      </div>
-      <div class="question">
-        <h2>Compass:</h2>
-        <ul>
-          <button type="button" onclick="Wrong()">1</button>
-          <button type="button" onclick="Wrong()">2</button>
-          <button type="button" onclick="Right()">3</button>
-          <button type="button" onclick="Wrong()">4</button>
-          <button type="button" onclick="Wrong()">5</button>
-          <button type="button" onclick="Wrong()">6</button>
-          <button type="button" onclick="Wrong()">7</button>
-          <button type="button" onclick="Wrong()">8</button>
-          <button type="button" onclick="Wrong()">9</button>
-        </ul>
-      </div>
-      <div class="question">
-        <h2>Propeller:</h2>
-        <ul>
-          <button type="button" onclick="Wrong()">1</button>
-          <button type="button" onclick="Wrong()">2</button>
-          <button type="button" onclick="Wrong()">3</button>
-          <button type="button" onclick="Wrong()">4</button>
-          <button type="button" onclick="Right()">5</button>
-          <button type="button" onclick="Wrong()">6</button>
-          <button type="button" onclick="Wrong()">7</button>
-          <button type="button" onclick="Wrong()">8</button>
-          <button type="button" onclick="Wrong()">9</button>
-        </ul>
-      </div>
-      <div class="question">
-        <h2>Handheld:</h2>
-        <ul>
-          <button type="button" onclick="Right()">1</button>
-          <button type="button" onclick="Wrong()">2</button>
-          <button type="button" onclick="Wrong()">3</button>
-          <button type="button" onclick="Wrong()">4</button>
-          <button type="button" onclick="Wrong()">5</button>
-          <button type="button" onclick="Wrong()">6</button>
-          <button type="button" onclick="Wrong()">7</button>
-          <button type="button" onclick="Wrong()">8</button>
-          <button type="button" onclick="Wrong()">9</button>
-        </ul>
-      </div>
-      <div class="question">
-        <h2>VHF:</h2>
-        <ul>
-          <button type="button" onclick="Wrong()">1</button>
-          <button type="button" onclick="Wrong()">2</button>
-          <button type="button" onclick="Wrong()">3</button>
-          <button type="button" onclick="Wrong()">4</button>
-          <button type="button" onclick="Wrong()">5</button>
-          <button type="button" onclick="Wrong()">6</button>
-          <button type="button" onclick="Right()">7</button>
-          <button type="button" onclick="Wrong()">8</button>
-          <button type="button" onclick="Wrong()">9</button>
-        </ul>
-      </div>
-      <div class="question" id='submit'>
-        <h2>Submit Answers:</h2>
-        <ul>
-          <button type="button" onclick="Submit()">Submit</button>
-        </ul>
-      </div>
-      <div class="question" id='thanks'>
-
-        <h2>Submitted! Thank you for participating!</h2>
+    <section class="header">
+      <div class="showcase">
+        <h1>Elis Jones.</h1>
+        <div class="links">
+          <div class="icon-wrap">
+            <a href="https://github.com/ej14433/"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/elis-jones/"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:elis.jones@outlook.com"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
       </div>
     </section>
-    <section class="image">
-      <img src="ilb_simple.png" alt="">
+    <section class="section">
+      <div class="title"><i class="fas fa-graduation-cap"></i> Education</div>
+      <hr/>
+      <div class="sub-title">
+        <h2>BSc Computer Science</h2>
+        <h3>University of Bristol</h3>
+      </div>
+      <div class="content-container">
+        <div class="content">
+          <p class="content-title">Projects <i class="fas fa-chevron-right"></i></i></p>
+        </hr>
+          <ul class="list">
+            <li class="project">
+              <p class="inner-content-title bold">Natural History Museum of Bristol <i class="fas fa-chevron-right"></i></p>
+              <p class="inner-content">Was part of the team which was tasked to redesign the way in which Bristol Museum accesses their vast database. We constructed a web application, for which I was a member of the front-end team.</p>
+            </li>
+            <li class="project">
+              <p class="inner-content-title bold">SeaMor Wildlife Tours<i class="fas fa-chevron-right"></i></p>
+              <p class="inner-content">Currently constructing a modern web solution, which allows users to log in, make bookings, enquiries, reviews etc. This uses a Javascript, Node.js, SQlite3, and Express stack. This is in accordance with coursework guidelines.</p>
+            </li>
+            <li class="project">
+              <p class="inner-content-title bold">RNLI VR Training Application<i class="fas fa-chevron-right"></i></p>
+              <p class="inner-content">My final year project is focussed on the construction of a virtual training environment for the RNLI. Specifically, it will analyse the differing effects that presentation media have on a user's ability to acquire spatial knowledge.</p></li>
+          </ul>
+        </div>
+        <div class="content">
+          <p class="content-title">Modules Including <i class="fas fa-chevron-right"></i></p>
+          </hr>
+          <ul class="list">
+            <li>Advanced Algorithms</li>
+            <li>Software Product Engineering</li>
+            <li>Web Technologies</li>
+            <li>Machine Learning etc. </li>
+          </ul>
+        </div>
+        <div class="content">
+          <p class="content-title">Technologies Used <i class="fas fa-chevron-right"></i></p>
+          <div class="edu-list">
+            <div class="logo-container">
+              <img class="tech-logo" src="./img/CSS3.svg" alt=""/>
+              <div class="logo-overlay"><p class="logo-overlay-text">CSS3</p></div>
+            </div>
+            <div class="logo-container">
+              <img src="./img/HTML5.svg" alt="" class="tech-logo">
+              <div class="logo-overlay"><p class="logo-overlay-text">HTML5</p></div>
+            </div>
+            <div class="logo-container">
+              <img src="./img/JavaScript.svg" alt="" class="tech-logo">
+              <div class="logo-overlay"><p class="logo-overlay-text">Java Script</p></div>
+            </div>
+            <div class="logo-container">
+              <img src="./img/CPP.svg" alt="" class="tech-logo">
+              <div class="logo-overlay"><p class="logo-overlay-text">C++</p></div>
+            </div>
+            <div class="logo-container wide">
+              <img src="./img/NODEJS.svg" alt="" class="tech-logo wide">
+              <div class="logo-overlay"><p class="logo-overlay-text">Node.js</p></div>
+            </div>
+            <div class="logo-container">
+              <img src="./img/UNITY.svg" alt="" class="tech-logo">
+              <div class="logo-overlay"><p class="logo-overlay-text">Unity</p></div>
+            </div>
+            <div class="logo-container">
+              <img src="./img/MAYA.svg" alt="" class="tech-logo">
+              <div class="logo-overlay"><p class="bold logo-overlay-text">Maya</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br/>
+      <div class="sub-title">
+        <h2>A-Levels</h2>
+        <h3>Aberaeron Comprehensive School</h3>
+      </div>
+      <div class="content-container">
+        <p>A*(Maths)AA</p>
+      </div>
     </section>
-      <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
-      <script src="./scripts/bundle.js"></script>
+    <section class="section">
+      <div class="title"><i class="fas fa-briefcase"></i> Experience</div>
+      <hr/>
+      <div class="content-container">
+        <div class="content">
+          <p class="content-title">Skipper at SeaMor Wildlife Tours <i class="fas fa-chevron-right"></i></p>
+          <div class="content-info">
+            <p>Skipper of a passenger carrying vessel, for which I maintain certificates in sea safety, first aid, and radio communications.</p>
+            <br/>
+            <p class="bold">Responsibilities:</p>
+            <ul>
+              <li>Communicating crucial information with management and coastguard.</li>
+              <li>Leading a small team to maintain a nationally renowned standard of service.</li>
+              <li>Making effective decisions in high-pressure and time sensitive scenarios.</li>
+              <li>Operating to an extremely strict schedule.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="content">
+          <p class="content-title">Ski Instructor at Urdd Gobaith Cymru <i class="fas fa-chevron-right"></i></p>
+          <div class="content-info">
+            <p>Instructor at a youth residential centre, where I conduct lessons to groups of up to 30 students from the age of 8. I conduct these lessons through the medium of Welsh and English.</p>
+            <br/>
+            <p class="bold">Responsibilities:</p>
+            <ul>
+              <li>Communicating tasks effectively to a large group of students with varying levels of language skills.</li>
+              <li>Encouraging the Welsh language whilst also maintaining an inclusive group activity.</li>
+            </ul>
 
-      <footer>
-        <h2>Elis Jones</h2>
-        <div class="logo"><img src="uob_logo.png" alt=""></div>
-      </footer>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <section class="section">
+      <div class="title"><i class="fas fa-hands-helping"></i> Volunteering</div>
+      <hr/>
+      <div class="content-container">
+        <div class="content">
+          <p class="content-title">RNLI <i class="fas fa-chevron-right"></i></p>
+          <div class="content-info">
+            <p>Fully trained crew member on both the All-weather and Inshore lifeboats. For which I am expected to respond to emergencies at sea at a moments notice.</p>
+            <br/>
+            <p class="bold">Responsibilities:</p>
+            <ul>
+              <li>Working effectively in a team to complete tasks in a safe yet prompt manner.</li>
+              <li>Making high-pressure decisions where crew or casualty may be in life threatening situations.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="content">
+          <p class="content-title">Youth Advisory Board <i class="fas fa-chevron-right"></i></p>
+          <div class="content-info">
+            <p class="bold">Responsibilities:</p>
+            <ul>
+              <li>Communicating and reinforcing personal ideas.</li>
+              <li>Consulting with the RNLI on projects which they are considering to introduce nationwide. </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <p>elis.jones@outlook.com<i class="footer-i fas fa-envelope"></i> </p>
+      <p>07480711728<i class="footer-i fas fa-phone"></i></p>
+    </footer>
   </body>
 </html>
